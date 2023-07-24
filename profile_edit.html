@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+<form method="POST">
+  <label for="locale">Choose a locale:</label>
+  <select name="locale" id="locale">
+    {% for locale in locales %}
+    <option value="{{ locale }}">{{ locale }}</option>
+    {% endfor %}
+  </select>
+
+  <label for="first_name">First Name</label>
+  <input type="text" id="first_name" name="first_name" required value="{{ profile.first_name }}">
+
+  <label for="last_name">Last Name</label>
+  <input type="text" id="last_name" name="last_name" required value="{{ profile.last_name }}">
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required value="{{ profile.email }}">
+
+  <label for="telephone">Telephone</label>
+  <input type="tel" id="telephone" name="telephone" required value="{{ profile.telephone }}">
+
+  <label for="birthdate_year">Birthdate Year</label>
+  <input type="number" id="birthdate_year" name="birthdate_year" min="1900" max="{{ current_year }}" required value="{{ profile.birthdate_year }}">
+
+  <label for="birthdate_month">Birthdate Month</label>
+  <input type="number" id="birthdate_month" name="birthdate_month" min="1" max="12" required value="{{ profile.birthdate_month }}">
+
+  <label for="birthdate_day">Birthdate Day</label>
+  <input type="number" id="birthdate_day" name="birthdate_day" min="1" max="31" required value="{{ profile.birthdate_day }}">
+
+  <label for="company">Company</label>
+  <input type="text" id="company" name="company" required value="{{ profile.company }}">
+
+  <label for="company_type">Company Type</label>
+  <input type="text" id="company_type" name="company_type" required value="{{ profile.company_type }}">
+
+  <label for="academic_degree">Academic Degree</label>
+  <input type="text" id="academic_degree" name="academic_degree" required value="{{ profile.academic_degree }}">
+
+  <label for="occupation">Occupation</label>
+  <input type="text" id="occupation" name="occupation" required value="{{ profile.occupation }}">
+
+  <label for="dish">Favorite Dish</label>
+  <input type="text" id="dish" name="dish" required value="{{ profile.dish }}">
+
+  <label for="drink">Favorite Drink</label>
+  <input type="text" id="drink" name="drink" required value="{{ profile.drink }}">
+
+  <label for="fruit">Favorite Fruit</label>
+  <input type="text" id="fruit" name="fruit" required value="{{ profile.fruit }}">
+
+  <label for="spices">Favorite Spices</label>
+  <input type="text" id="spices" name="spices" required value="{{ profile.spices }}">
+
+  <label for="vegetable">Favorite Vegetable</label>
+  <input type="text" id="vegetable" name="vegetable" required value="{{ profile.vegetable }}">
+
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
