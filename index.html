@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Locale</title>
+    <link rel="stylesheet" type="text/css" href="/static/ovo.css">
+</head>
+<body>
+<form method="POST">
+  <label for="locale">Choose a locale:</label>
+  <select name="locale" id="locale">
+    {% for locale in locales %}
+    <option value="{{ locale }}">{{ locale }}</option>
+    {% endfor %}
+  </select>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
