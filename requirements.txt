@@ -1,4 +1,4 @@
-flask==2.3.2
-mimesis==10.1.0
+flask
+mimesis
 flask-json
 gunicorn
